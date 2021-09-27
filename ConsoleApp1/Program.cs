@@ -30,6 +30,8 @@ namespace ConsoleApp1
             Console.WriteLine("Name :" + entree.Name.ToString() + "\nCuisine: " + entree.Cuisine + "\nCountry: " + entree.Country);
 
             Console.ReadLine();
+
+            //need to finish on serializing and deserializing with json 
         }
 
     }
