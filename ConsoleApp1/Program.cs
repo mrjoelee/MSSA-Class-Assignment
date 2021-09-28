@@ -29,9 +29,17 @@ namespace ConsoleApp1
             entree.Selection();
             Console.WriteLine("Name :" + entree.Name.ToString() + "\nCuisine: " + entree.Cuisine + "\nCountry: " + entree.Country);
 
-            Console.ReadLine();
+            Console.WriteLine("Serialization");
+            string result = JsonConvert.SerializeObject(entree);
+            Console.WriteLine(result);
 
-            //need to finish on serializing and deserializing with json 
+            Console.WriteLine("\nDeserilization");
+            Entree newEntree = JsonConvert.DeserializeObject<Entree>(result);
+            Console.WriteLine("Entree name is: " + newEntree.Name);
+            Console.WriteLine("Entree cuisine is: " + newEntree.Cuisine);
+            Console.WriteLine("Entree country is: " + newEntree.Country);
+
+            Console.ReadLine();
         }
 
     }
