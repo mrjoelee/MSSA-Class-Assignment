@@ -8,6 +8,7 @@ namespace ConsoleApp1
 {
     class Entree : Food
     {
+
         public string Country { get; set; }
 
         public Entree()
@@ -31,6 +32,8 @@ namespace ConsoleApp1
         {
             return base.ToString();
         }
+
+      
     }
 }
 
